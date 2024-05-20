@@ -1,0 +1,14 @@
+button.restart {
+    box-shadow: 0 4px 8px rgba(0, 0.5, 0.5, 0.5);
+}
+
+button.restart:hover {
+    background-color: #28a745;
+    transform: translateY(-2px);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result-screen {
+    text-align: center;
+}

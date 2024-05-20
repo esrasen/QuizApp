@@ -1,0 +1,47 @@
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.options button {
+    width: 300px;
+    margin: 5px 0;
+    border: 1px solid #ced4da;
+    background-color: #f8f9fa;
+    color: black;
+}
+.options button:hover {
+    background-color: #e2e6ea;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timer {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.question {
+    text-align: center;
+}
+
+.question img{
+    width: 80% ;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.options button.correct, .options button.incorrect {    /* Tıklandıktan sonra butonlara birdaha tıklanmaması için */
+    pointer-events: none;
+}
+.options button.correct {
+    background-color: #28a745;
+    color: white;
+}
+
+.options button.incorrect {
+    background-color: #dc3545;
+    color: white;
+}
