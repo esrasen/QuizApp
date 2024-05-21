@@ -21,9 +21,9 @@ function App() {
   return (
       <>
           <div className="App">
-              {!started && !finished && <StartScreen startQuiz={startQuiz}/>}
-              {started && !finished && <Quiz questions={questions} finishQuiz={finishQuiz}/>}
-              {finished && <ResultScreen score={score}/>}
+              {!started && !finished && <StartScreen startQuiz={startQuiz}/>}                    //Başlangıç ekranı
+              {started && !finished && <Quiz questions={questions} finishQuiz={finishQuiz}/>}    //Quiz ekranı
+              {finished && <ResultScreen score={score}/>}                                        //Sonuç ekranı
           </div>
       </>
   )

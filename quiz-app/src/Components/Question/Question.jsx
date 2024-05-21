@@ -24,11 +24,11 @@ const images = {
     'trex.jpg': trex
 };
 const Question = ({data, handleAnswer}) => {
-    const [showAnswers, setShowAnswers] = useState(false);
-    const [timer, setTimer] = useState(30);
-    const [selectedAnswer, setSelectedAnswer] = useState(null);
+    const [showAnswers, setShowAnswers] = useState(false);  // Cevapları gösterme durumu
+    const [timer, setTimer] = useState(30);  // Sayaç
+    const [selectedAnswer, setSelectedAnswer] = useState(null); // Seçilen cevap
 
-    useEffect(() => {
+    useEffect(() => {       // Her yeni soru geldiğinde timer sıfırlanır ve cevaplar gösterilmez.
         setShowAnswers(false);
         setTimer(30);
         setSelectedAnswer(null);
@@ -37,22 +37,22 @@ const Question = ({data, handleAnswer}) => {
             setTimer((prevTimer) => prevTimer - 1);
         }, 1000);
 
-        return () => clearInterval(countdown);
+        return () => clearInterval(countdown);      // Component kaldırıldığında interval temizlenir.
     }, [data]);
 
     useEffect(() => {
-        if (timer === 20) {
+        if (timer === 20) {     // 20. saniyede cevaplar gösterilir.
             setShowAnswers(true);
         }
 
         if (timer === 0) {
-            handleAnswer(false);
+            handleAnswer(false); // Sayaç 0 olduğunda cevap verilmemiş kabul edilir.
         }
     }, [timer, handleAnswer]);
 
     const handleClick = (answer) => {
-        setSelectedAnswer(answer);
-        setTimeout(() => handleAnswer(answer === data.answer), 500);
+        setSelectedAnswer(answer); // Seçilen cevap kaydedilir.
+        setTimeout(() => handleAnswer(answer === data.answer), 500); // Doğru veya yanlış olup olmadığı kontrol edilir ve 500ms sonra handleAnswer fonksiyonu çağrılır.
     };
 
     return (
@@ -63,7 +63,7 @@ const Question = ({data, handleAnswer}) => {
                 alt="Question img"
             />
             <div className="timer">Kalan süre: {timer}</div>
-            {showAnswers ? (
+            {showAnswers ? (        // Eğer showAnswers true ise cevaplar gösterilir.
                 <div className="options">
                     {data.options.map((option, index) => (
                         <button key={index} onClick={() => handleClick(option)}

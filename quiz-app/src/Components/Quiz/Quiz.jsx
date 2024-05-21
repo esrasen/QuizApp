@@ -3,8 +3,8 @@ import Question from '../Question/Question.jsx';
 import './quiz.css';
 
 const Quiz = ({ questions, finishQuiz }) => {
-    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-    const [score, setScore] = useState({ correct: 0, incorrect: 0 });
+    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);        // Şu anki soru indexi
+    const [score, setScore] = useState({ correct: 0, incorrect: 0 });       // Skor durumu
 
     const handleAnswer = (isCorrect) => {
 
@@ -16,9 +16,9 @@ const Quiz = ({ questions, finishQuiz }) => {
 
         const nextQuestionIndex = currentQuestionIndex + 1;
         if (nextQuestionIndex < questions.length) {
-            setCurrentQuestionIndex(nextQuestionIndex);
+            setCurrentQuestionIndex(nextQuestionIndex);     // Sonraki soruya geçilir
         } else {
-            finishQuiz(updatedScore);
+            finishQuiz(updatedScore);    // Sorular bittiğinde quiz sonlandırılır
         }
     };
 
