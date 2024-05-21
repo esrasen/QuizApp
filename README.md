@@ -14,6 +14,7 @@ Bu projede React ve Vite kullanılarak bir quiz uygulaması oluşturulmuştur. U
     <li><a href="#proje-ozeti"> ➤ Proje Özeti</a></li>
     <li><a href="#teknolojiler"> ➤ Kullanılan Teknolojiler</a></li>
     <li><a href="#kurulum"> ➤ Kurulum ve Başlatma</a></li>
+    <li><a href="#sistem-gorselleri"> ➤ Uygulama Görselleri</a></li>
     <li><a href="#iletisim"> ➤ İletişim</a></li>
   </ol>
 </details>
@@ -62,6 +63,22 @@ npm install
 npm run dev
 
 ```
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+<!-- PROGRAM SCREENSHOTS -->
+<h2 id="sistem-gorselleri"> :camera: Site İçi Görseller</h2>
+
+<p align="justify"> 
+
+
+  <img src="quiz-app/src/assets/images/Ekran1.png" alt="Sistem Ana Görseli">
+  <img src="quiz-app/src/assets/images/Ekran2.png" alt="Sistem Ana Görseli">
+  <img src="quiz-app/src/assets/images/Ekran3.png" alt="Sistem Ana Görseli">
+  <img src="quiz-app/src/assets/images/Ekran4.png" alt="Sistem Ana Görseli">
+ 
+</p>
+
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 <!-- CONTACT -->
